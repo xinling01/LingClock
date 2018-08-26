@@ -14,7 +14,23 @@ public class PlayAlarmAty extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.alarm_player_aty);
         mp=MediaPlayer.create(this,R.raw.music);
+        mp.start();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mp.stop();
+        mp.release();
+    }
+
     private MediaPlayer mp;
 }

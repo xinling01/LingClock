@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
 	<receiver android:name="AlarmReceiver"></receiver>
+     <activity android:name=".PlayAlarmAty"  android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
